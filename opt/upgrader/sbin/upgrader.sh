@@ -70,13 +70,15 @@ esac
 ###
 ### find manifest
 ###
-echo "checking manifest"
-if [ ! -e $7/opt/upgrader.MANIFEST ] ; then
-	exit 8
-fi
-if ! (cd $7/opt ; find upgrader \! -type d -print0 | sort -z | xargs -0 sha1sum | diff - upgrader.MANIFEST); then
-	exit 9
-fi
+### takes too long on the poor little arm
+###
+#echo "checking manifest"
+#if [ ! -e $7/opt/upgrader.MANIFEST ] ; then
+#	exit 8
+#fi
+#if ! (cd $7/opt ; find upgrader \! -type d -print0 | sort -z | xargs -0 sha1sum | diff - upgrader.MANIFEST); then
+#	exit 9
+#fi
 
 ###
 ### run the upgrader
