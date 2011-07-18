@@ -1,0 +1,6 @@
+#!/bin/ash
+
+mount /proc
+mount /sys
+nandbd.sh
+reboot -f

@@ -1,0 +1,5 @@
+#!/opt/upgrader/sbin/ash
+
+/opt/upgrader/sbin/chroot /opt/upgrader/phase-1-chroot /do-upgrader
+
+/opt/upgrader/sbin/reboot

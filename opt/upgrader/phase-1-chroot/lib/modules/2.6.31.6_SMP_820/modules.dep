@@ -1,0 +1,17 @@
+/lib/modules/2.6.31.6_SMP_820/kernel/net/sunrpc/sunrpc.ko:
+/lib/modules/2.6.31.6_SMP_820/kernel/fs/fat/vfat.ko:
+/lib/modules/2.6.31.6_SMP_820/kernel/fs/nfs_common/nfs_acl.ko: /lib/modules/2.6.31.6_SMP_820/kernel/net/sunrpc/sunrpc.ko
+/lib/modules/2.6.31.6_SMP_820/kernel/fs/lockd/lockd.ko: /lib/modules/2.6.31.6_SMP_820/kernel/net/sunrpc/sunrpc.ko
+/lib/modules/2.6.31.6_SMP_820/kernel/fs/nfsd/nfsd.ko: /lib/modules/2.6.31.6_SMP_820/kernel/fs/lockd/lockd.ko /lib/modules/2.6.31.6_SMP_820/kernel/fs/nfs_common/nfs_acl.ko /lib/modules/2.6.31.6_SMP_820/kernel/net/sunrpc/sunrpc.ko
+/lib/modules/2.6.31.6_SMP_820/kernel/fs/ntfs/ntfs.ko:
+/lib/modules/2.6.31.6_SMP_820/kernel/fs/hfsplus/hfsplus.ko:
+/lib/modules/2.6.31.6_SMP_820/kernel/fs/nls/nls_iso8859-1.ko:
+/lib/modules/2.6.31.6_SMP_820/kernel/fs/nls/nls_cp437.ko:
+/lib/modules/2.6.31.6_SMP_820/kernel/arch/arm/plat-oxnas/power_button.ko:
+/lib/modules/2.6.31.6_SMP_820/kernel/crypto/michael_mic.ko:
+/lib/modules/2.6.31.6_SMP_820/kernel/crypto/pcbc.ko:
+/lib/modules/2.6.31.6_SMP_820/kernel/drivers/net/mii.ko:
+/lib/modules/2.6.31.6_SMP_820/kernel/drivers/net/gmac/gmac.ko: /lib/modules/2.6.31.6_SMP_820/kernel/drivers/net/mii.ko
+/lib/modules/2.6.31.6_SMP_820/kernel/drivers/leds/led-class.ko:
+/lib/modules/2.6.31.6_SMP_820/kernel/drivers/scsi/scsi_wait_scan.ko:
+/lib/modules/2.6.31.6_SMP_820/kernel/drivers/char/hw_random/rng-core.ko:
