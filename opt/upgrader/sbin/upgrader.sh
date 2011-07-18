@@ -11,7 +11,6 @@
 #   8	no MANIFEST
 #   9	MANIFEST not matched
 #  10	reflash phase 1 had an error
-#  11	reboot failed
 
 ###
 ### argument count
@@ -83,11 +82,6 @@ esac
 ###
 ### run the upgrader
 ###
-if ! echo now upgrading stage1, u-boot, and kernel; then
-        chroot /shares/external/*/Partition-1/opt/upgrader/phase-0-chroot /do-upgrader
-	exit 10
-fi
-
-reboot
-
-exit 11
+echo now upgrading stage1, u-boot, and kernel
+chroot /shares/external/*/Partition-1/opt/upgrader/phase-0-chroot /do-upgrader
+exit 10
