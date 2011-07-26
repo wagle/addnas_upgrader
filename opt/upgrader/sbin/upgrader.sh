@@ -10,7 +10,10 @@
 #   7	path unpacked in wrong place
 #   8	no MANIFEST
 #   9	MANIFEST not matched
+#  11	couldn't make a backup
 #  10	reflash phase 1 had an error
+
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin
 
 ###
 ### argument count
@@ -78,6 +81,16 @@ esac
 #if ! (cd $7/opt ; find upgrader \! -type d -print0 | sort -z | xargs -0 sha1sum | diff - upgrader.MANIFEST); then
 #	exit 9
 #fi
+
+###
+### make a backup
+###
+
+/etc/init.d/tsi-archiver /shares/external/*/Partition-1 init
+
+if ! /etc/init.d/tsi-archiver /shares/external/*/Partition-1 backup "[Pre-Upgrade Backup]" ; then
+	exit 11	
+fi
 
 ###
 ### run the upgrader
