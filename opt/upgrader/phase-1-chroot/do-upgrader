@@ -3,4 +3,6 @@
 mount /proc
 mount /sys
 nandbd.sh
+sync
+sync
 reboot -f
