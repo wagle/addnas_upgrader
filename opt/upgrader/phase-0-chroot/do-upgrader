@@ -5,4 +5,7 @@ mount /sys
 nandbd.sh
 sync
 sync
-reboot -f
+while true ; do
+	reboot
+	sleep 60
+od
