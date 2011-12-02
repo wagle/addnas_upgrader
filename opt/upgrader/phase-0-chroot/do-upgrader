@@ -8,4 +8,4 @@ sync
 while true ; do
 	reboot
 	sleep 00
-od
+done
