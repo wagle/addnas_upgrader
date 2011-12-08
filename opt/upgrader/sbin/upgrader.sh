@@ -18,7 +18,7 @@ export PATH=/bin:/sbin:/usr/bin:/usr/sbin
 ###
 ### argument count
 ###
-echo "counting args"
+echo "$0: counting args" > /dev/console
 if [ $# != 0 ]; then
 	exit 1
 fi
@@ -26,7 +26,7 @@ fi
 ###
 ### external disk count
 ###
-echo "counting external disks"
+echo "$0: counting external disks" > /dev/console
 set $(df | grep /shares/external | wc -l)
 case $1 in
 0)	exit 2;;
@@ -39,7 +39,7 @@ esac
 ###
 # df returns as output:
 # /dev/sda1     ext3    7.4G  146M  6.9G   3% /shares/external/Lexar-USB-Flash-Drive/Partition-1
-echo "checking partition device/type/mount-point"
+echo "$0: checking partition device/type/mount-point" > /dev/console
 set $(df -T $0 | tail -1)
 if [ $1 != "/dev/sda1" ] ; then
 	exit 4
@@ -60,7 +60,7 @@ esac
 ###
 ### check full path name
 ###
-echo "check full path name"
+echo "$0: check full path name" > /dev/console
 case $0 in
 $7/opt/upgrader/sbin/upgrader.sh)
 	;;
@@ -86,6 +86,7 @@ esac
 ### make a backup
 ###
 
+echo "$0: making backup" > /dev/console
 /etc/init.d/tsi-archiver /shares/external/*/Partition-1 init
 
 if ! /etc/init.d/tsi-archiver /shares/external/*/Partition-1 backup "[Pre-Upgrade Backup]" ; then
@@ -95,6 +96,8 @@ fi
 ###
 ### run the upgrader
 ###
-echo now upgrading stage1, u-boot, and kernel
+echo "$0: now upgrading stage1, u-boot, and kernel" > /dev/console
 chroot /shares/external/*/Partition-1/opt/upgrader/phase-0-chroot /do-upgrader
+
+echo "$0: do-upgrader failed" > /dev/console
 exit 10
