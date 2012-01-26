@@ -7,5 +7,5 @@ sync
 sync
 while true ; do
 	reboot
-	sleep 00
+	sleep 100
 done
