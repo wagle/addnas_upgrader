@@ -49,20 +49,21 @@ ext3)	;;
 xfs)	;;
 *)	exit 5;;
 esac
-case $7 in
-/shares/external/*/Partition-1)
-	;;
-*)
-	exit 6
-	;;
-esac
+#case $7 in
+#/shares/external/*/Partition-1)
+	MPOINT=$7
+#	;;
+#*)
+#	exit 6
+#	;;
+# esac
 
 ###
 ### check full path name
 ###
 echo "$0: check full path name" > /dev/console
 case $0 in
-$7/opt/upgrader/sbin/upgrader.sh)
+$MPOINT/opt/upgrader/sbin/upgrader.sh)
 	;;
 *)
 	exit 7
@@ -87,9 +88,9 @@ esac
 ###
 
 echo "$0: making backup" > /dev/console
-/etc/init.d/tsi-archiver /shares/external/*/Partition-1 init
+/etc/init.d/tsi-archiver "$MPOINT" init
 
-if ! /etc/init.d/tsi-archiver /shares/external/*/Partition-1 backup "[Pre-Upgrade Backup]" ; then
+if ! /etc/init.d/tsi-archiver "$MPOINT" backup "[Pre-Upgrade Backup]" ; then
 	exit 11	
 fi
 
@@ -97,7 +98,7 @@ fi
 ### run the upgrader
 ###
 echo "$0: now upgrading stage1, u-boot, and kernel" > /dev/console
-chroot /shares/external/*/Partition-1/opt/upgrader/phase-0-chroot /do-upgrader
+chroot "$MPOINT"/opt/upgrader/phase-0-chroot /do-upgrader
 
 echo "$0: do-upgrader failed" > /dev/console
 exit 10
