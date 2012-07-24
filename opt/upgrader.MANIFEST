@@ -5,7 +5,7 @@ dabcb067f9e3bc2e052b33fdaf2be89215fa6a9f  upgrader/phase-0-chroot/bin/busybox
 b6765200f6f06d392be91cb9015b19a1ad0c2a4c  upgrader/phase-0-chroot/bin/ep2_inout.ihx
 b39c9aff1ed7d3e7014b40ab1d9cd6dd3098044e  upgrader/phase-0-chroot/bin/lsattr
 e54f09e961c09181659a438bccc3fb3d249d2fe6  upgrader/phase-0-chroot/bin/uuidgen
-f7c67af0a2e601f8f807e456266648d4d159b7ae  upgrader/phase-0-chroot/do-upgrader
+9fe23d1ae3ee93221ef4521eba166884b7c24cd8  upgrader/phase-0-chroot/do-upgrader
 23f048683cd06121c5a766ce1580b6ac5f95309f  upgrader/phase-0-chroot/etc/busybox.conf
 52e26350bab9d413c75d2a6c6e8aab7be9247d8e  upgrader/phase-0-chroot/etc/create_fast_share_example.sh
 6dbd7511a5d92337e9e12ff48685758c8240e92a  upgrader/phase-0-chroot/etc/create_fast_share_raid_example.sh
@@ -281,7 +281,7 @@ c7c2b007f89fee1d48af66620a4e716ae78996e8  upgrader/phase-0-chroot/var/log/wtmp
 b6765200f6f06d392be91cb9015b19a1ad0c2a4c  upgrader/phase-1-chroot/bin/ep2_inout.ihx
 b39c9aff1ed7d3e7014b40ab1d9cd6dd3098044e  upgrader/phase-1-chroot/bin/lsattr
 e54f09e961c09181659a438bccc3fb3d249d2fe6  upgrader/phase-1-chroot/bin/uuidgen
-f7c67af0a2e601f8f807e456266648d4d159b7ae  upgrader/phase-1-chroot/do-upgrader
+a988e6c0af778049c30c4d65fcf92824cb1839d3  upgrader/phase-1-chroot/do-upgrader
 23f048683cd06121c5a766ce1580b6ac5f95309f  upgrader/phase-1-chroot/etc/busybox.conf
 52e26350bab9d413c75d2a6c6e8aab7be9247d8e  upgrader/phase-1-chroot/etc/create_fast_share_example.sh
 6dbd7511a5d92337e9e12ff48685758c8240e92a  upgrader/phase-1-chroot/etc/create_fast_share_raid_example.sh
@@ -542,13 +542,13 @@ f280d9595954383949a73c153a3420e244a8e753  upgrader/phase-1-chroot/usr/share/zone
 adc83b19e793491b1c6ea0fd8b46cd9f32e592fc  upgrader/phase-1-chroot/var/etc/exports
 aa737e015700a9274b7962b570b25f40f99bbb2a  upgrader/phase-1-chroot/var/etc/ssmtp/ssmtp.conf
 7db8a0132357d9df908e389d482fc265bf3dcb6d  upgrader/phase-1-chroot/var/etc/TZ
-bfb020e1fa39f86035aa362571b4ac3be9036462  upgrader/phase-1-chroot/var/images/rootfs.arm.ubi
-f02bcdbab0248cc2efb3487780b303a438cb4d3e  upgrader/phase-1-chroot/var/images/stage1.wrapped
-e31c26f7a1d81e13c09e2cf67a1adbcf374ec6d9  upgrader/phase-1-chroot/var/images/u-boot.wrapped
-020f6f6dc0905087dedee74b5747e16185ef3304  upgrader/phase-1-chroot/var/images/uImage
+2eb6f4942272dfa5822c9e96914fb234b58314a6  upgrader/phase-1-chroot/var/images/rootfs.arm.ubi
+6b610948ee4f9d1b99bcd70df7fef9d011a385cf  upgrader/phase-1-chroot/var/images/stage1.wrapped
+6a5d2f39461b245c926894b0bd638f7ae075dfe5  upgrader/phase-1-chroot/var/images/u-boot.wrapped
+39d46fe3d58775222ac365eff59a811fa56b4cc5  upgrader/phase-1-chroot/var/images/uImage
 91e95be6b6634e3c21072dfcd661146728694326  upgrader/phase-1-chroot/var/lib/current-version
 03db55c5d6c5ed9168278351058ec0002630cf6b  upgrader/phase-1-chroot/var/log/wtmp
 38897efec6e95f204534cf3e3e984f553749cec8  upgrader/phase-1-chroot/var/oxsemi/network-settings
 769d7c1e45f6c2ce8ef2ea63b43c3e70d9624967  upgrader/sbin/busybox
 ba58fb3944774a969d77edfbb3624bc4f340c479  upgrader/sbin/init-phase-1
-44af9a20dbb8cbda6e4675660f71559542ee2a00  upgrader/sbin/upgrader.sh
+2983215b5fe1b450e427c1cd97c558225ba7340f  upgrader/sbin/upgrader.sh
