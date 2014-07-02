@@ -25,3 +25,9 @@ installer-installer:
 		rmdir mnt )
 	tar cf - installer-installer | gzip --best > installer-installer.$$(date -u +%Y%m%d-%H%M%S).tar.gz
 
+### dangerous operation, uncomment if you know what you are doing (and have added/deleted device files)
+###pack-device-files:
+###	tar cf - $$(find . \( -type b -or -type c \)) | gzip > device-files.tar.gz
+
+unpack-device-files:
+	( tar xf device-files.tar.gz )
